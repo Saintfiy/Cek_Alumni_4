@@ -15,12 +15,16 @@ export default function AlumniForm() {
     faculty: '',
     major: '',
     workplace: '',
+    workplace_address: '',
+    workplace_social_media: '',
     position: '',
     employment_type: 'Swasta',
     email: '',
     phone: '',
     linkedin: '',
-    instagram: ''
+    instagram: '',
+    facebook: '',
+    tiktok: ''
   });
 
   const handleChange = (e) => {
@@ -110,6 +114,14 @@ export default function AlumniForm() {
               <input type="text" name="workplace" value={formData.workplace} onChange={handleChange} placeholder="Nama Perusahaan/Institusi" />
             </div>
             <div className="input-group">
+              <label>Alamat Bekerja</label>
+              <input type="text" name="workplace_address" value={formData.workplace_address} onChange={handleChange} placeholder="Alamat kantor atau tempat usaha" />
+            </div>
+            <div className="input-group">
+              <label>Sosial Media Tempat Kerja</label>
+              <input type="text" name="workplace_social_media" value={formData.workplace_social_media} onChange={handleChange} placeholder="URL/handle perusahaan" />
+            </div>
+            <div className="input-group">
               <label>Posisi / Jabatan</label>
               <input type="text" name="position" value={formData.position} onChange={handleChange} placeholder="Contoh: Senior Engineer" />
             </div>
@@ -143,6 +155,14 @@ export default function AlumniForm() {
             <div className="input-group">
               <label>Link LinkedIn</label>
               <input type="text" name="linkedin" value={formData.linkedin} onChange={handleChange} placeholder="https://linkedin.com/in/..." />
+            </div>
+            <div className="input-group">
+              <label>Link Facebook</label>
+              <input type="text" name="facebook" value={formData.facebook} onChange={handleChange} placeholder="https://facebook.com/..." />
+            </div>
+            <div className="input-group">
+              <label>Link TikTok</label>
+              <input type="text" name="tiktok" value={formData.tiktok} onChange={handleChange} placeholder="https://www.tiktok.com/@..." />
             </div>
             <div className="input-group">
               <label>Username Instagram</label>

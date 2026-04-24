@@ -207,3 +207,210 @@
     padding-top: 16px;
   }
 }
+
+@media (max-width: 768px) {
+  .alumni-list {
+    padding-bottom: 24px;
+  }
+
+  .list-header-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 24px;
+  }
+
+  .list-header-row h1 {
+    font-size: 1.5rem;
+  }
+
+  .list-header-row button {
+    width: 100%;
+  }
+
+  .filter-bar {
+    flex-direction: column;
+    padding: 12px 16px;
+    gap: 12px;
+  }
+
+  .search-box {
+    min-width: unset;
+    width: 100%;
+  }
+
+  .filter-group {
+    width: 100%;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .filter-item {
+    width: 100%;
+  }
+
+  .filter-item select {
+    width: 100%;
+  }
+
+  .alumni-card {
+    gap: 16px;
+  }
+
+  .alumni-name-tag {
+    margin-bottom: 12px;
+  }
+
+  .alumni-link {
+    font-size: 0.95rem;
+  }
+
+  .job-title {
+    font-size: 0.85rem;
+  }
+
+  .job-detail-row {
+    font-size: 0.8rem;
+  }
+
+  .contact-row {
+    font-size: 0.8rem;
+  }
+
+  .view-detail-btn {
+    width: 100%;
+    justify-content: center;
+    font-size: 0.75rem;
+    padding: 10px 12px;
+  }
+
+  .status-badge-mini {
+    font-size: 0.6rem;
+    padding: 2px 6px;
+  }
+}
+
+@media (max-width: 480px) {
+  .alumni-list {
+    padding-bottom: 16px;
+  }
+
+  .list-header-row h1 {
+    font-size: 1.25rem;
+  }
+
+  .filter-bar {
+    padding: 12px 12px;
+    gap: 10px;
+  }
+
+  .search-box {
+    padding: 0 10px;
+  }
+
+  .search-box input {
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+
+  .filter-item {
+    padding: 0 10px;
+  }
+
+  .filter-item select {
+    padding: 10px 0;
+    font-size: 0.8rem;
+  }
+
+  .alumni-card {
+    gap: 12px;
+    padding: 16px 0;
+  }
+
+  .alumni-name-tag {
+    margin-bottom: 10px;
+    gap: 6px;
+  }
+
+  .alumni-link {
+    font-size: 0.85rem;
+  }
+
+  .nim-text {
+    font-size: 0.8rem;
+  }
+
+  .job-header {
+    gap: 8px;
+    margin-bottom: 6px;
+  }
+
+  .job-title {
+    font-size: 0.8rem;
+  }
+
+  .job-type-badge {
+    font-size: 0.7rem !important;
+    padding: 4px 8px !important;
+  }
+
+  .job-detail-row {
+    font-size: 0.75rem;
+    margin-bottom: 3px;
+  }
+
+  .job-detail-icon {
+    min-width: 12px;
+  }
+
+  .contact-row {
+    font-size: 0.75rem;
+    margin-bottom: 6px;
+    gap: 8px;
+  }
+
+  .contact-icon {
+    min-width: 12px;
+  }
+
+  .view-detail-btn {
+    font-size: 0.7rem;
+    padding: 8px 10px;
+    margin-top: 10px;
+  }
+
+  .status-badge-mini {
+    font-size: 0.55rem;
+    padding: 2px 5px;
+  }
+
+  .text-truncate {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+@media (max-width: 360px) {
+  .list-header-row h1 {
+    font-size: 1.1rem;
+  }
+
+  .alumni-link {
+    font-size: 0.8rem;
+  }
+
+  .job-title {
+    font-size: 0.75rem;
+  }
+
+  .filter-bar {
+    padding: 10px;
+    gap: 8px;
+  }
+
+  .search-box input {
+    font-size: 0.85rem;
+    padding: 8px;
+  }
+}

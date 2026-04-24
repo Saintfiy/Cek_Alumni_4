@@ -188,17 +188,28 @@
 }
 
 @media (max-width: 768px) {
-  .alumni-import-container {
-    padding: 1rem;
-  }
+  .alumni-import-container { padding: 1rem; }
+  .alumni-import-container h2 { font-size: 1.5rem; }
+  .import-section h3 { font-size: 1.1rem; }
+  .preview-table td { max-width: 100px; font-size: 0.8rem; }
+  .btn-import { padding: 0.6rem 1.5rem; font-size: 0.9rem; width: 100%; }
+  .file-input-wrapper { flex-direction: column; }
+}
 
-  .preview-table td {
-    max-width: 100px;
-    font-size: 0.8rem;
-  }
+@media (max-width: 480px) {
+  .alumni-import-container { padding: 0.75rem; }
+  .alumni-import-container h2 { font-size: 1.25rem; }
+  .import-section h3 { font-size: 1rem; }
+  .file-input-wrapper { padding: 0.75rem; flex-direction: column; }
+  .preview-table th { padding: 0.5rem; font-size: 0.75rem; }
+  .preview-table td { padding: 0.5rem; max-width: 80px; font-size: 0.75rem; }
+  .import-actions { flex-direction: column; gap: 0.75rem; }
+  .btn-import { width: 100%; padding: 0.75rem 1rem; font-size: 0.85rem; }
+  .import-info { padding: 1rem; }
+}
 
-  .btn-import {
-    padding: 0.6rem 1.5rem;
-    font-size: 0.9rem;
-  }
+@media (max-width: 360px) {
+  .alumni-import-container { padding: 0.5rem; }
+  .alumni-import-container h2 { font-size: 1.1rem; }
+  .preview-table td { max-width: 60px; font-size: 0.7rem; }
 }

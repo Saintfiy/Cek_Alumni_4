@@ -92,3 +92,26 @@
     grid-column: span 1;
   }
 }
+
+@media (max-width: 768px) {
+  .form-header h1 { font-size: 1.5rem; }
+  .form-section { padding: 20px; }
+  .section-title h2 { font-size: 1rem; }
+  .form-inputs { gap: 14px; }
+  .input-group label { font-size: 0.8rem; }
+  .input-group input, .input-group select { padding: 10px 14px; font-size: 0.9rem; }
+}
+
+@media (max-width: 480px) {
+  .form-header h1 { font-size: 1.25rem; }
+  .form-section { padding: 16px; }
+  .form-inputs { gap: 12px; }
+  .input-group input, .input-group select { padding: 8px 12px; font-size: 0.85rem; }
+  .form-actions { flex-direction: column-reverse; width: 100%; }
+  .form-actions button { width: 100%; }
+}
+
+@media (max-width: 360px) {
+  .form-header h1 { font-size: 1.1rem; }
+  .form-section { padding: 12px; }
+}

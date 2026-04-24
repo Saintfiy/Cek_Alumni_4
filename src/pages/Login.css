@@ -265,3 +265,31 @@
   font-size: 0.8rem;
   text-align: center;
 }
+
+@media (max-width: 768px) {
+  .orb-1 { width: 300px; height: 300px; top: -150px; left: -150px; }
+  .orb-2 { width: 250px; height: 250px; bottom: -100px; right: -100px; }
+  .orb-3 { width: 200px; height: 200px; }
+  .login-container { padding: 16px; }
+  .login-logo { width: 56px; height: 56px; }
+  .login-logo span { font-size: 1.5rem; }
+  .login-header h1 { font-size: 1.5rem; }
+  .login-card { padding: 24px; }
+}
+
+@media (max-width: 480px) {
+  .login-container { padding: 12px; gap: 20px; }
+  .login-logo { width: 48px; height: 48px; margin-bottom: 12px; }
+  .login-logo span { font-size: 1.25rem; }
+  .login-header h1 { font-size: 1.25rem; }
+  .login-header p { font-size: 0.8rem; }
+  .login-card { padding: 20px; }
+  .form-input { padding: 10px 14px; font-size: 0.9rem; }
+  .login-btn { padding: 12px; font-size: 0.95rem; }
+  .demo-hint { font-size: 0.7rem; }
+}
+
+@media (max-width: 360px) {
+  .login-header h1 { font-size: 1.1rem; }
+  .login-card { padding: 16px; }
+}

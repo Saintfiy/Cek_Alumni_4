@@ -142,3 +142,50 @@
   background: rgba(239,68,68,0.2);
   color: white;
 }
+
+@media (max-width: 1024px) {
+  .sidebar {
+    width: 220px;
+    padding: 16px 0;
+  }
+
+  .logo-container h2 {
+    font-size: 1.1rem;
+  }
+
+  .sidebar-nav {
+    gap: 6px;
+    padding: 16px 12px;
+  }
+
+  .nav-item {
+    padding: 10px 14px;
+    font-size: 0.9rem;
+    gap: 10px;
+  }
+
+  .user-avatar-small {
+    width: 28px;
+    height: 28px;
+  }
+
+  .user-name-small {
+    font-size: 0.8rem;
+  }
+
+  .role-tag {
+    font-size: 0.65rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .sidebar {
+    display: none;
+  }
+}

@@ -265,3 +265,33 @@
 .job-type-badge.swasta { background: rgba(168,85,247,0.2); color: #c084fc; }
 .job-type-badge.wirausaha { background: rgba(16,185,129,0.2); color: #34d399; }
 .job-type-badge.default { background: rgba(148,163,184,0.2); color: #94a3b8; }
+
+@media (max-width: 768px) {
+  .welcome-banner { padding: 24px; flex-direction: column; align-items: flex-start; }
+  .welcome-text h1 { font-size: 1.5rem; }
+  .search-section { padding: 24px; }
+  .search-section h2 { font-size: 1.1rem; }
+  .search-bar { flex-direction: column; }
+  .search-input, .search-btn { width: 100%; }
+  .results-grid { grid-template-columns: 1fr; }
+  .result-avatar { width: 40px; height: 40px; }
+  .guide-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 480px) {
+  .welcome-banner { padding: 16px; }
+  .welcome-text h1 { font-size: 1.25rem; }
+  .welcome-stats { flex-direction: column; width: 100%; }
+  .stat-pill { width: 100%; font-size: 0.8rem; }
+  .search-section { padding: 16px; }
+  .search-section h2 { font-size: 1rem; }
+  .result-avatar { width: 36px; height: 36px; }
+  .result-name { font-size: 0.9rem; }
+  .guide-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 360px) {
+  .welcome-banner { padding: 12px; }
+  .welcome-text h1 { font-size: 1.1rem; }
+  .search-section { padding: 12px; }
+}

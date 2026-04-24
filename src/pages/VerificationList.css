@@ -81,3 +81,25 @@
 .action-btn.view:hover { background: rgba(59, 130, 246, 0.1); color: var(--accent-primary); border-color: var(--accent-primary); }
 .action-btn.approve:hover { background: rgba(16, 185, 129, 0.1); color: var(--success); border-color: var(--success); }
 .action-btn.reject:hover { background: rgba(239, 68, 68, 0.1); color: var(--danger); border-color: var(--danger); }
+
+@media (max-width: 768px) {
+  .page-header h1 { font-size: 1.5rem; }
+  .glass-table th { padding: 12px 16px; font-size: 0.75rem; }
+  .glass-table td { padding: 12px 16px; }
+  .alumni-info-cell .name { font-size: 0.95rem; }
+  .action-buttons { gap: 8px; }
+}
+
+@media (max-width: 480px) {
+  .page-header h1 { font-size: 1.25rem; }
+  .loading-state, .empty-state { padding: 40px 20px; }
+  .glass-table th { padding: 10px 12px; font-size: 0.7rem; }
+  .glass-table td { padding: 10px 12px; }
+  .alumni-info-cell .nim { font-size: 0.75rem; }
+  .action-btn { padding: 5px; }
+}
+
+@media (max-width: 360px) {
+  .page-header h1 { font-size: 1.1rem; }
+  .glass-table th { padding: 8px 10px; font-size: 0.65rem; }
+}

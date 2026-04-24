@@ -1,11 +1,13 @@
 {
   "name": "cekalumni",
+  "homepage": "https://saintfiy.github.io/Cek_Alumni_4",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "deploy": "gh-pages -d dist",
     "lint": "eslint .",
     "preview": "vite preview",
     "import:validate": "node tracker/validate_alumni_data.js",
@@ -28,6 +30,7 @@
     "eslint": "^9.39.4",
     "eslint-plugin-react-hooks": "^7.1.1",
     "eslint-plugin-react-refresh": "^0.5.2",
+    "gh-pages": "^6.3.0",
     "globals": "^17.5.0",
     "vite": "^8.0.9"
   }
