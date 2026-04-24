@@ -11,7 +11,9 @@ export default function AlumniList() {
   
   const [alumni, setAlumni] = useState([]);
   const [loading, setLoading] = useState(true);
+  const [loadingMore, setLoadingMore] = useState(false);
   const [totalCount, setTotalCount] = useState(0);
+  const [offset, setOffset] = useState(0);
   
   // States for filters
   const [searchTerm, setSearchTerm] = useState('');
@@ -20,11 +22,18 @@ export default function AlumniList() {
   const [filterYear, setFilterYear] = useState('');
 
   useEffect(() => {
-    fetchAlumni();
+    setOffset(0);
+    setAlumni([]);
+    fetchAlumni(0);
   }, [filterFaculty, filterStatus, filterYear]);
 
-  async function fetchAlumni() {
-    setLoading(true);
+  async function fetchAlumni(startOffset = offset) {
+    const isInitial = startOffset === 0;
+    if (isInitial) {
+      setLoading(true);
+    } else {
+      setLoadingMore(true);
+    }
     try {
       let query = supabase.from('alumni').select('*', { count: 'exact' });
 
@@ -43,21 +52,33 @@ export default function AlumniList() {
 
       const { data, count, error } = await query
         .order('updated_at', { ascending: false })
-        .limit(50);
+        .range(startOffset, startOffset + 49);
       
       if (error) throw error;
-      setAlumni(data || []);
+      
+      if (isInitial) {
+        setAlumni(data || []);
+      } else {
+        setAlumni(prev => [...prev, ...(data || [])]);
+      }
       setTotalCount(count || 0);
+      setOffset(startOffset + 50);
     } catch (e) {
       console.warn('Could not fetch alumni.', e);
     } finally {
-      setLoading(false);
+      if (isInitial) {
+        setLoading(false);
+      } else {
+        setLoadingMore(false);
+      }
     }
   }
 
   const handleSearchSubmit = (e) => {
     e.preventDefault();
-    fetchAlumni();
+    setOffset(0);
+    setAlumni([]);
+    fetchAlumni(0);
   };
 
   const exportToCSV = () => {
@@ -230,6 +251,21 @@ export default function AlumniList() {
                 </div>
               ))}
             </div>
+          </div>
+        )}
+        {!loading && alumni.length > 0 && alumni.length < totalCount && (
+          <div style={{ padding: '24px', textAlign: 'center' }}>
+            <button 
+              onClick={() => fetchAlumni(offset)}
+              disabled={loadingMore}
+              className="glass-button"
+              style={{
+                cursor: loadingMore ? 'not-allowed' : 'pointer',
+                opacity: loadingMore ? 0.6 : 1
+              }}
+            >
+              {loadingMore ? 'Memuat...' : `Muat Lebih Banyak (${alumni.length}/${totalCount})`}
+            </button>
           </div>
         )}
       </div>
