@@ -1,0 +1,34 @@
+{
+  "name": "cekalumni",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint .",
+    "preview": "vite preview",
+    "import:validate": "node tracker/validate_alumni_data.js",
+    "import:cli": "node tracker/import_alumni.js",
+    "import:help": "echo 'Available import commands:\n  npm run import:validate <csv_file> - Validate CSV before import\n  npm run import:cli <csv_file> --force - Import CSV file\n  npm run dev - Start dev server with Web UI import at /alumni/import'"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.104.0",
+    "lucide-react": "^1.8.0",
+    "papaparse": "^5.5.3",
+    "react": "^19.2.5",
+    "react-dom": "^19.2.5",
+    "react-router-dom": "^7.14.2"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.4",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^6.0.1",
+    "eslint": "^9.39.4",
+    "eslint-plugin-react-hooks": "^7.1.1",
+    "eslint-plugin-react-refresh": "^0.5.2",
+    "globals": "^17.5.0",
+    "vite": "^8.0.9"
+  }
+}
