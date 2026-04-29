@@ -114,8 +114,12 @@ export default function AlumniList() {
 
   const formatUrl = (url) => {
     if (!url) return '#';
-    if (url.startsWith('http://') || url.startsWith('https://')) return url;
-    return `https://${url}`;
+    let newUrl = url.trim();
+    if (newUrl.startsWith('https://')) newUrl = newUrl.slice(8);
+    else if (newUrl.startsWith('http://')) newUrl = newUrl.slice(7);
+    if (newUrl.startsWith('www.')) newUrl = newUrl.slice(4);
+    if (newUrl.endsWith('/$0')) newUrl = newUrl.slice(0, -3);
+    return `https://www.${newUrl}`;
   };
 
   return (
