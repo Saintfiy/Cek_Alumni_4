@@ -112,6 +112,12 @@ export default function AlumniList() {
     return 'default';
   };
 
+  const formatUrl = (url) => {
+    if (!url) return '#';
+    if (url.startsWith('http://') || url.startsWith('https://')) return url;
+    return `https://${url}`;
+  };
+
   return (
     <div className="alumni-list animate-fade-in">
       <div className="list-header-row">
@@ -233,12 +239,12 @@ export default function AlumniList() {
                   <div className="col-sosmed">
                     <div className="sosmed-group">
                       {row.linkedin && (
-                        <a href={row.linkedin} target="_blank" rel="noreferrer" className="sosmed-link" title="LinkedIn">
+                        <a href={formatUrl(row.linkedin)} target="_blank" rel="noreferrer" className="sosmed-link" title="LinkedIn">
                           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
                         </a>
                       )}
                       {row.instagram && (
-                        <a href={row.instagram} target="_blank" rel="noreferrer" className="sosmed-link" title="Instagram">
+                        <a href={formatUrl(row.instagram)} target="_blank" rel="noreferrer" className="sosmed-link" title="Instagram">
                           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
                         </a>
                       )}

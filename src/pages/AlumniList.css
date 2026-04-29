@@ -290,15 +290,6 @@
   }
 }
 
-@media (max-width: 480px) {
-  .alumni-list {
-    padding-bottom: 16px;
-  }
-
-  .list-header-row h1 {
-    font-size: 1.25rem;
-  }
-
   .filter-bar {
     padding: 12px 12px;
     gap: 10px;
@@ -381,36 +372,6 @@
 
   .status-badge-mini {
     font-size: 0.55rem;
-    padding: 2px 5px;
-  }
-
-  .text-truncate {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-}
-
-@media (max-width: 360px) {
-  .list-header-row h1 {
-    font-size: 1.1rem;
-  }
-
-  .alumni-link {
-    font-size: 0.8rem;
-  }
-
-  .job-title {
-    font-size: 0.75rem;
-  }
-
-  .filter-bar {
-    padding: 10px;
-    gap: 8px;
-  }
-
-  .search-box input {
-    font-size: 0.85rem;
-    padding: 8px;
+    padding: 1px 4px;
   }
 }
